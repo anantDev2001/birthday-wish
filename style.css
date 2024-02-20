@@ -22,6 +22,7 @@ body {
 .box {
     position: relative;
     width: 90vw;
+    max-width: 400px;
     height: 200px;
     display: flex;
     justify-content: center;
