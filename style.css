@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(4, 75, 97);
+}
+
+.parent-container {
+    position: relative;
+}
+
+.box {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    color: rgb(164, 18, 18);
+    border-radius: 20px;
+}
+
+.box1 {
+    color: aliceblue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Michroma", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1 p {
+    font-size: 18px;
+    font-family: "Michroma", sans-serif;
+
+
+}
+
+.box1 span {
+    color: #ff9800;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: "Michroma", sans-serif;
+
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    width: 415px;
+    height: 50%;
+    background-color: #ff9800;
+    box-shadow: 0 0 20px rgb(8, 8, 8);
+    animation: animate 4s linear infinite;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 10px;
+    background-color: rgb(4, 75, 97);
+    border-radius: 16px;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
